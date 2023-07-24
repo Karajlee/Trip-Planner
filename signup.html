@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="log" class="mt-5"><img src="img/logo.jpg" width="70" height="70" alt="logo"> Trip Planner</p>
+    <div id="wrap">
+        <div class="container">
+            <div class="col-12 d-flex justify-content-center">
+                <h2 class="mt-5 mb-4">Sign Up</h2>
+            </div>
+            <div class="col-12">
+                <form id="signup-form" action="" method="POST">
+                    <div class="form-group col-12">
+                        <label for="first-name" class="col-form-label">First Name</label>
+                        <input type="text" name="first-name" class="form-control input-border" id="first-name">
+                        <small id="first-name-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="last-name" class="col-form-label">Last Name</label>
+                        <input type="text" name="last-name" class="form-control input-border" id="last-name">
+                        <small id="last-name-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="sign-user" class="col-form-label">Username (Email)</label>
+                        <input type="text" name="sign-user" class="form-control input-border" id="sign-user">
+                        <small id="sign-user-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="sign-password" class="col-form-label">Password</label>
+                        <input type="text" name="sign-password" class="form-control input-border" id="sign-password">
+                        <small id="sign-password-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="confirm-password" class="col-form-label">Confirm Password</label>
+                        <input type="text" name="confirm-password" class="form-control input-border"
+                            id="confirm-password">
+                        <small id="confirm-password-error" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-group row center-button col-12">
+                        <button type="submit" class="form-control btn btn-primary btn-style bot-el">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a id="link" href="login.html">Existing User</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
