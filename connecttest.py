@@ -6,7 +6,7 @@ mycursor = mydb.cursor()
 
 mycursor.execute("select * from hw4.users")
 
-result = mycursor.fetchall() # or user fetchone()
+# result = mycursor.fetchall() # or user fetchone()
 
 for i in mycursor:
     print(i)

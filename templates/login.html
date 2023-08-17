@@ -9,23 +9,37 @@
 </head>
 
 <body>
-    <p id="log" class="mt-5"><img src="img/logo.jpg" width="70" height="70" alt="logo"> Trip Planner</p>
+    <p id="log" class="mt-5"><img src="{{ url_for('static', filename='img/logo.jpg')}}" width="70" height="70" alt="logo"> Trip Planner</p>
     <div id="wrap">
         <div class="container">
             <div class="col-12 d-flex justify-content-center">
                 <h2 class="mt-5 mb-4">Log In</h2>
             </div>
             <div class="col-12">
-                <form id="login-form" action="home.html">
+                <form id="login-form" action="{{ url_for('login') }}" method="POST">
                     <div class="form-group col-12">
                         <label for="log-user" class="col-form-label">Username</label>
                         <input type="text" name="log-user" class="form-control input-border" id="log-user">
                         <small id="log-user-error" class="form-text text-danger"></small>
+                        <!-- Add this code snippet where you want to display the error message -->
+                        {% if Uerror_message %}
+                        <div class="alert alert-danger">
+                            {{ Uerror_message }}
+                        </div>
+                        {% endif %}
+
                     </div>
                     <div class="form-group col-12">
                         <label for="log-password" class="col-form-label">Password</label>
                         <input type="text" name="log-password" class="form-control input-border" id="log-password">
                         <small id="log-password-error" class="form-text text-danger"></small>
+                        <!-- Add this code snippet where you want to display the error message -->
+                        {% if Perror_message %}
+                        <div class="alert alert-danger">
+                            {{ Perror_message }}
+                        </div>
+                        {% endif %}
+
                     </div>
                     <div class="form-group row center-button col-12">
                         <button type="submit" class="form-control btn btn-primary btn-style">Log In</button>
